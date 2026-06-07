@@ -1,0 +1,83 @@
+{
+  "ingredients": [
+    {
+      "id": 1,
+      "name": "Bawang Merah",
+      "className": "Bawang Merah",
+      "description": "Bawang merah adalah rempah pokok dalam masakan Indonesia yang memiliki aroma dan rasa yang khas. Bahan ini sering digunakan sebagai bumbu dasar untuk menumis dan menambah cita rasa pada berbagai hidangan tradisional.",
+      "recipes": [
+        "Nasi Goreng",
+        "Sambal Matah",
+        "Soto Ayam",
+        "Rendang Daging"
+      ],
+      "tips": "Simpan bawang merah di tempat yang sejuk, kering, dan terlindungi dari sinar matahari langsung untuk mempertahankan kesegaran hingga beberapa minggu.",
+      "color": "#C85A5A"
+    },
+    {
+      "id": 2,
+      "name": "Bawang Putih",
+      "className": "Bawang Putih",
+      "description": "Bawang putih merupakan rempah wajib dalam dapur Indonesia dengan aroma yang tajam dan rasa yang gurih. Bahan ini digunakan untuk menambah kelezatan dan aroma pada hampir semua masakan berkuah maupun tumisan.",
+      "recipes": [
+        "Tumis Sayuran",
+        "Sop Iga",
+        "Acar",
+        "Capcay"
+      ],
+      "tips": "Letakkan bawang putih dalam wadah berlubang di tempat yang gelap dan berventilasi baik agar tahan lebih lama.",
+      "color": "#F5E6D3"
+    },
+    {
+      "id": 3,
+      "name": "Cabai Merah",
+      "className": "Cabai Merah",
+      "description": "Cabai merah adalah bahan penting yang memberikan rasa pedas dan warna cerah pada masakan Indonesia. Bahan ini kaya akan vitamin C dan sering digunakan segar atau diubah menjadi sambal untuk berbagai hidangan.",
+      "recipes": [
+        "Sambal Goreng",
+        "Gulai",
+        "Oseng-oseng",
+        "Tahu Goreng Sambal"
+      ],
+      "tips": "Simpan cabai merah dalam kantong kertas atau wadah berlubang di lemari es untuk menjaga kesegaran hingga 2 minggu.",
+      "color": "#D32F2F"
+    },
+    {
+      "id": 4,
+      "name": "Sayuran Hijau",
+      "className": "Sayuran Hijau",
+      "description": "Sayuran hijau seperti bayam dan kangkung adalah sumber nutrisi penting dalam menu sehari-hari keluarga Indonesia. Kedua sayuran ini memiliki tekstur yang empuk dan cita rasa yang ringan, cocok untuk berbagai teknik memasak.",
+      "recipes": [
+        "Tumis Bayam Goreng",
+        "Sayur Bening",
+        "Gado-gado",
+        "Tumis Kangkung Belacan"
+      ],
+      "tips": "Simpan sayuran hijau dalam plastik atau tempat tertutup di bagian paling dingin lemari es maksimal 3-5 hari.",
+      "color": "#2E7D32"
+    },
+    {
+      "id": 5,
+      "name": "Tomat",
+      "className": "Tomat",
+      "description": "Tomat memberikan rasa asam segar dan warna merah cerah pada berbagai masakan Indonesia. Buah ini kaya akan vitamin dan antioksidan, dan menjadi bahan penting untuk membuat sambal, kuah, dan berbagai saus tradisional.",
+      "recipes": [
+        "Sambal Tomat",
+        "Tomyam",
+        "Sambal Nasi",
+        "Sayur Santan"
+      ],
+      "tips": "Simpan tomat matang di suhu ruangan away dari panas langsung, dan letakkan yang belum matang di tempat terkena sinar matahari.",
+      "color": "#D84315"
+    },
+    {
+      "id": 6,
+      "name": "Background",
+      "className": "Background",
+      "description": "Tidak ada bahan masakan terdeteksi dalam frame.",
+      "recipes": [],
+      "tips": "",
+      "color": "#888780"
+    }
+  ]
+}
