@@ -14,6 +14,22 @@ const RECIPE_DATABASE = [
     description: 'Sambal tomat pedas manis yang segar, cocok untuk lauk gorengan.',
     difficulty: 'Mudah',
     cookTime: '15 menit',
+    image: '/recipes/sambal_tomat.png',
+    rating: '4.91',
+    likes: '87',
+    instructions: [
+      'Iris tipis bawang merah dan tomat.',
+      'Goreng bawang merah dan tomat hingga layu.',
+      'Ulek kasar bawang merah, tomat, cabai rawit, terasi bakar, garam, dan gula.',
+      'Sajikan sambal dengan perasan jeruk limau.'
+    ],
+    fullIngredients: [
+      '3 siung Bawang Merah',
+      '2 buah Tomat Segar',
+      '5 buah Cabai Merah',
+      '1 sdt Terasi Bakar',
+      'Secukupnya Garam & Gula'
+    ]
   },
   {
     id: 2,
@@ -22,6 +38,22 @@ const RECIPE_DATABASE = [
     description: 'Bumbu tumisan dasar aromatis yang harum khas masakan rumah.',
     difficulty: 'Mudah',
     cookTime: '10 menit',
+    image: '/recipes/tumis_duo_bawang.png',
+    rating: '4.85',
+    likes: '52',
+    instructions: [
+      'Kupas dan iris tipis bawang merah dan bawang putih.',
+      'Panaskan minyak goreng dalam wajan.',
+      'Tumis bawang hingga harum dan berwarna kecokelatan.',
+      'Tambahkan sedikit garam, merica, dan penyedap rasa.',
+      'Sajikan sebagai bumbu siraman atau lauk praktis.'
+    ],
+    fullIngredients: [
+      '5 siung Bawang Merah',
+      '5 siung Bawang Putih',
+      '2 sdm Minyak Goreng',
+      'Secukupnya Garam, Merica, & Penyedap'
+    ]
   },
   {
     id: 3,
@@ -30,6 +62,23 @@ const RECIPE_DATABASE = [
     description: 'Sup hangat dengan kombinasi rasa asam segar dan kaldu gurih.',
     difficulty: 'Sedang',
     cookTime: '30 menit',
+    image: '/recipes/sup_tomat_gurih.png',
+    rating: '4.76',
+    likes: '41',
+    instructions: [
+      'Tumis bawang merah dan bawang putih hingga wangi.',
+      'Masukkan tomat potong dan air secukupnya, rebus hingga mendidih.',
+      'Haluskan sup dengan blender atau saring jika ingin kuah yang lembut.',
+      'Bumbui dengan garam, gula, kaldu ayam, dan merica bubuk.',
+      'Sajikan hangat dengan taburan daun seledri atau roti panggang.'
+    ],
+    fullIngredients: [
+      '3 buah Tomat Merah Matang',
+      '3 siung Bawang Merah',
+      '2 siung Bawang Putih',
+      '500 ml Air / Kaldu Ayam',
+      'Secukupnya Garam, Gula, Kaldu Bubuk, & Seledri'
+    ]
   },
   {
     id: 4,
@@ -38,6 +87,21 @@ const RECIPE_DATABASE = [
     description: 'Sambel korek dengan sengatan pedas alami yang menggugah selera.',
     difficulty: 'Mudah',
     cookTime: '12 menit',
+    image: 'https://assets.unileversolutions.com/recipes-v3/258887-default.png',
+    rating: '4.90',
+    likes: '96',
+    instructions: [
+      'Ulek kasar bawang putih, cabai rawit merah, dan garam.',
+      'Panaskan minyak sisa gorengan hingga benar-benar panas.',
+      'Siramkan minyak panas ke atas ulekan sambal.',
+      'Aduk rata dan sajikan selagi hangat bersama ayam atau bebek goreng.'
+    ],
+    fullIngredients: [
+      '3 siung Bawang Putih',
+      '15 buah Cabai Rawit Merah',
+      '3 sdm Minyak Goreng Panas',
+      '1/2 sdt Garam'
+    ]
   },
   {
     id: 5,
@@ -46,6 +110,23 @@ const RECIPE_DATABASE = [
     description: 'Tumisan sayur sehat kaya serat, dimasak cepat agar tetap renyah.',
     difficulty: 'Mudah',
     cookTime: '15 menit',
+    image: 'https://assets.unileversolutions.com/recipes-v3/258653-default.png',
+    rating: '4.82',
+    likes: '35',
+    instructions: [
+      'Cuci bersih sayuran hijau (kangkung/sawi) lalu potong-potong.',
+      'Tumis iris bawang merah dan bawang putih hingga harum.',
+      'Masukkan sayuran hijau, besarkan api wajan.',
+      'Tambahkan sedikit air, garam, dan saus tiram.',
+      'Aduk cepat selama 3-5 menit agar sayuran tetap hijau renyah, lalu angkat.'
+    ],
+    fullIngredients: [
+      '1 ikat Sayuran Hijau (Kangkung/Sawi)',
+      '4 siung Bawang Merah',
+      '2 siung Bawang Putih',
+      '1 sdm Saus Tiram',
+      'Secukupnya Garam & Air'
+    ]
   },
   {
     id: 6,
@@ -54,6 +135,24 @@ const RECIPE_DATABASE = [
     description: 'Sambal iris khas yang segar tanpa diulek maupun dimasak lama.',
     difficulty: 'Sedang',
     cookTime: '20 menit',
+    image: 'https://assets.unileversolutions.com/recipes-v3/258272-default.png',
+    rating: '4.88',
+    likes: '74',
+    instructions: [
+      'Iris halus bawang merah, serai bagian putihnya, daun jeruk, dan cabai rawit.',
+      'Campurkan semua bahan iris dalam mangkuk.',
+      'Tambahkan garam, gula, terasi bakar yang dihaluskan, dan air jeruk nipis.',
+      'Panaskan minyak kelapa hingga berasap, lalu siramkan ke dalam mangkuk bahan.',
+      'Aduk rata sambil sedikit ditekan-tekan agar aromanya keluar.'
+    ],
+    fullIngredients: [
+      '8 siung Bawang Merah',
+      '2 batang Serai (ambil bagian putih)',
+      '3 lembar Daun Jeruk (buang tulang daun)',
+      '10 buah Cabai Rawit',
+      '2 sdm Minyak Kelapa',
+      '1 sdt Air Jeruk Nipis'
+    ]
   },
   {
     id: 7,
@@ -62,6 +161,23 @@ const RECIPE_DATABASE = [
     description: 'Sayur kuah santan kuning yang kaya rasa bumbu rempah tradisional.',
     difficulty: 'Sedang',
     cookTime: '40 menit',
+    image: 'https://assets.unileversolutions.com/recipes-v3/257696-default.jpg',
+    rating: '4.79',
+    likes: '63',
+    instructions: [
+      'Haluskan bawang merah, bawang putih, kunyit, kemiri, dan cabai.',
+      'Tumis bumbu halus bersama daun salam dan serai hingga harum.',
+      'Masukkan santan encer dan potongan tomat, aduk perlahan agar santan tidak pecah.',
+      'Setelah mendidih, masukkan sayuran hijau segar.',
+      'Masak hingga sayur matang, tuang santan kental, bumbui garam gula, angkat.'
+    ],
+    fullIngredients: [
+      '1 ikat Sayuran Hijau',
+      '2 buah Tomat (belah 4)',
+      '200 ml Santan Kental & 400 ml Santan Encer',
+      'Bumbu Halus: 5 Bawang Merah, 3 Bawang Putih, Kunyit, Kemiri',
+      '1 batang Serai & 2 lembar Daun Salam'
+    ]
   },
   {
     id: 8,
@@ -70,16 +186,34 @@ const RECIPE_DATABASE = [
     description: 'Variasi sambal hijau pelengkap hidangan padang.',
     difficulty: 'Mudah',
     cookTime: '15 menit',
+    image: 'https://assets.unileversolutions.com/recipes-v3/258265-default.jpg',
+    rating: '4.81',
+    likes: '58',
+    instructions: [
+      'Kukus cabai hijau besar, cabai rawit hijau, bawang putih, dan tomat hijau.',
+      'Ulek kasar bahan-bahan yang telah dikukus.',
+      'Panaskan minyak, tumis sambal ulek bersama daun jeruk hingga harum.',
+      'Tambahkan garam, gula pasir, dan perasan jeruk nipis.',
+      'Masak dengan api kecil hingga minyaknya keluar dan warna cabai matang merata.'
+    ],
+    fullIngredients: [
+      '10 buah Cabai Hijau Besar',
+      '10 buah Cabai Rawit Hijau',
+      '3 siung Bawang Putih',
+      '2 buah Tomat Hijau',
+      '3 lembar Daun Jeruk',
+      'Secukupnya Garam, Gula, & Minyak'
+    ]
   },
 ];
 
 const INGREDIENT_INFO = {
-  'Bawang Merah': { emoji: '🧅', badge: 'bg-rose-100 text-rose-800 border-rose-200' },
-  'Bawang Putih': { emoji: '🧄', badge: 'bg-amber-100 text-amber-900 border-amber-200' },
-  'Cabai Merah': { emoji: '🌶️', badge: 'bg-red-100 text-red-800 border-red-200' },
-  'Sayuran Hijau': { emoji: '🥬', badge: 'bg-emerald-100 text-emerald-800 border-emerald-200' },
-  'Tomat': { emoji: '🍅', badge: 'bg-orange-100 text-orange-800 border-orange-200' },
-  'Background': { emoji: '🍽️', badge: 'bg-slate-100 text-slate-700 border-slate-200' },
+  'Bawang Merah': { emoji: '🧅', badge: 'bg-rose-50 text-rose-700 border-rose-100' },
+  'Bawang Putih': { emoji: '🧄', badge: 'bg-amber-50 text-amber-800 border-amber-100' },
+  'Cabai Merah': { emoji: '🌶️', badge: 'bg-red-50 text-red-700 border-red-100' },
+  'Sayuran Hijau': { emoji: '🥬', badge: 'bg-emerald-50 text-emerald-700 border-emerald-100' },
+  'Tomat': { emoji: '🍅', badge: 'bg-orange-50 text-orange-700 border-orange-100' },
+  'Background': { emoji: '🍽️', badge: 'bg-slate-50 text-slate-700 border-slate-100' },
 };
 
 export default function App() {
@@ -92,6 +226,12 @@ export default function App() {
   const [predictions, setPredictions] = useState([]);
   const [modelLoadingProgress, setModelLoadingProgress] = useState(0);
   const [detectionConfidence, setDetectionConfidence] = useState(null);
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
+  const [imageError, setImageError] = useState({});
+
+  const handleImageError = (id) => {
+    setImageError((prev) => ({ ...prev, [id]: true }));
+  };
 
   // ========== REFS ==========
   const videoRef = useRef(null);
@@ -107,7 +247,7 @@ export default function App() {
       try {
         setModelLoadingProgress(30);
         const model = await tmImage.load(MODEL_URL + 'model.json', MODEL_URL + 'metadata.json');
-        
+
         setModelLoadingProgress(70);
         modelRef.current = model;
         setIsModelLoaded(true);
@@ -198,6 +338,7 @@ export default function App() {
 
   // ========== CART MANAGEMENT ==========
   const addToCart = (ingredient) => {
+    if (ingredient === 'Background') return;
     if (ingredient && !cart.includes(ingredient)) {
       setCart([...cart, ingredient]);
     }
@@ -219,54 +360,53 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 font-mono antialiased">
-      
+    <div className="min-h-screen bg-background text-text-main antialiased relative flex flex-col pb-8 font-[Inter]">
+
       {/* HEADER FRESH CULINARY */}
-      <header className="bg-white border-b border-slate-200 px-6 py-4 sticky top-0 z-50 shadow-sm flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <span className="text-3xl"></span>
+      <header className="bg-white border-b border-border-soft px-6 py-3 sticky top-0 z-50 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <span className="text-xl">🌿</span>
           <div>
-            <h1 className="text-xl font-black tracking-tight text-orange-600">Smart Ingredient Scanner</h1>
-            <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Fresh Kitchen Edition</p>
+            <h1 className="font-[Poppins] font-semibold text-[20px] text-[#1A1A1A] m-0 leading-tight">Smart Ingredient Scanner</h1>
+            <p className="font-[Inter] text-[12px] text-[#888888] m-0 mt-0.5">Identifikasi bahan masakan secara real-time</p>
           </div>
         </div>
 
         <div className="flex items-center gap-3">
-          <span className={`px-3 py-1 rounded-full text-xs font-bold border ${
-            isInferenceRunning 
-              ? 'bg-orange-50 text-orange-600 border-orange-200 animate-pulse' 
-              : 'bg-slate-100 text-slate-600 border-slate-200'
-          }`}>
-            ● STATUS: {!isModelLoaded ? 'LOADING MODEL' : !isCameraOn ? 'KAMERA OFF' : isInferenceRunning ? 'SCANNING ACTIVE' : 'READY'}
+          <span className={`px-3 py-1 rounded-full text-[11px] font-[Inter] transition-all duration-300 ${isInferenceRunning || isCameraOn
+            ? 'bg-[#E8F5E9] text-[#27AE60]'
+            : 'bg-[#F0F0F0] text-[#888888]'
+            }`}>
+            ● {!isModelLoaded ? 'LOADING MODEL' : !isCameraOn ? 'KAMERA OFF' : isInferenceRunning ? 'SCANNING ACTIVE' : 'READY'}
           </span>
         </div>
       </header>
 
       {/* MAIN LAYOUT SPLIT */}
-      <div className="max-w-7xl mx-auto p-6 flex flex-col lg:flex-row gap-6 h-[calc(100vh-80px)] overflow-hidden">
-        
+      <div className="max-w-7xl mx-auto w-full p-4 md:p-6 flex flex-col lg:flex-row gap-6 h-[calc(100vh-80px)] overflow-hidden">
+
         {/* ================= LEFT COLUMN ================= */}
         <div className="w-full lg:w-3/5 flex flex-col gap-4 h-full">
-          
-          <div className="flex-1 relative bg-slate-900 border-2 border-slate-200 rounded-2xl overflow-hidden shadow-inner flex items-center justify-center">
+
+          <div className="flex-1 relative rounded-[16px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex items-center justify-center bg-surface-warm">
             {isInferenceRunning && (
               <div className="absolute inset-0 z-20 pointer-events-none">
-                <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-orange-400 to-transparent opacity-80 animate-[scanLine_2.5s_ease-in-out_infinite]" style={{ top: '0%' }}></div>
+                <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-80 animate-[scanLine_2.5s_ease-in-out_infinite]" style={{ top: '0%' }}></div>
               </div>
             )}
 
-            <video ref={videoRef} className="w-full h-full object-cover" playsInline muted />
+            <video ref={videoRef} className="w-full h-full object-cover rounded-[16px]" playsInline muted />
 
             {/* OVERLAY DETEKSI */}
             {isCameraOn && currentDetection && detectionConfidence !== null && (
               <div className="absolute bottom-6 left-6 right-6 z-30 animate-[fadeIn_0.3s_ease-out_forwards]">
-                <div className="bg-white/95 backdrop-blur-md border-2 border-orange-400 rounded-xl p-4 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="bg-white/95 backdrop-blur-md border border-stone-200 shadow-xl rounded-xl p-4 flex flex-col md:flex-row items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
-                    <span className="text-4xl p-2 bg-orange-50 rounded-lg">
+                    <span className="text-4xl p-2 bg-orange-50 rounded-lg border border-orange-100">
                       {INGREDIENT_INFO[currentDetection]?.emoji || '🥕'}
                     </span>
                     <div>
-                      <p className="text-slate-900 font-extrabold text-lg">{currentDetection}</p>
+                      <p className="text-stone-900 font-extrabold text-base">{currentDetection}</p>
                       <p className="text-orange-600 text-xs font-bold">
                         Akurasi Match: {(detectionConfidence * 100).toFixed(1)}%
                       </p>
@@ -275,11 +415,10 @@ export default function App() {
 
                   <button
                     onClick={() => addToCart(currentDetection)}
-                    className={`w-full md:w-auto py-2.5 px-6 rounded-lg font-bold text-sm transition-all shadow ${
-                      cart.includes(currentDetection)
-                        ? 'bg-slate-100 text-slate-400 cursor-default border border-slate-200'
-                        : 'bg-orange-500 hover:bg-orange-600 text-white active:scale-95'
-                    }`}
+                    className={`w-full md:w-auto py-2.5 px-6 rounded-xl font-bold text-xs transition-all shadow active:scale-95 border ${cart.includes(currentDetection)
+                      ? 'bg-stone-50 text-stone-400 cursor-default border-stone-200'
+                      : 'bg-orange-500 hover:bg-orange-600 text-white border-transparent'
+                      }`}
                     disabled={cart.includes(currentDetection)}
                   >
                     {cart.includes(currentDetection) ? '✓ Ada di Keranjang' : '+ MASUKKAN KERANJANG'}
@@ -289,20 +428,23 @@ export default function App() {
             )}
 
             {!isModelLoaded && (
-              <div className="absolute inset-0 bg-white/90 backdrop-blur-sm flex flex-col items-center justify-center z-40">
+              <div className="absolute inset-0 bg-white/95 backdrop-blur-sm flex flex-col items-center justify-center z-40">
                 <div className="w-14 h-14 border-4 border-orange-200 border-t-orange-500 rounded-full animate-spin mx-auto mb-3"></div>
-                <p className="text-slate-800 font-bold text-sm">Menghubungkan ke Teachable Machine...</p>
-                <span className="inline-block bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full font-bold mt-2">
+                <p className="text-stone-850 font-bold text-sm">Menghubungkan ke Teachable Machine...</p>
+                <span className="inline-block bg-orange-50 text-orange-600 text-xs px-3 py-1 rounded-full font-bold mt-2 border border-orange-100">
                   {modelLoadingProgress}% Selesai
                 </span>
               </div>
             )}
 
             {!isCameraOn && isModelLoaded && (
-              <div className="absolute inset-0 bg-slate-100 flex flex-col items-center justify-center z-30 p-4 text-center">
-                <span className="text-5xl mb-2">📸</span>
-                <p className="text-slate-700 font-bold">Sistem Kamera Siap Digunakan</p>
-                <p className="text-slate-400 text-xs mt-1">Tekan tombol "Nyalakan Kamera" untuk mengaktifkan WebRTC feed.</p>
+              <div className="absolute inset-0 bg-gradient-to-br from-surface-warm to-background flex flex-col items-center justify-center z-30 p-4 text-center">
+                <svg className="w-16 h-16 text-[#CCBBAA] mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+                </svg>
+                <p className="text-text-main font-[Poppins] font-semibold text-[16px]">Sistem Kamera Siap</p>
+                <p className="font-[Inter] text-[14px] text-[#AAAAAA] mt-1 max-w-sm">Tekan tombol "Nyalakan Kamera" untuk mulai mendeteksi bahan masakan.</p>
               </div>
             )}
           </div>
@@ -310,44 +452,45 @@ export default function App() {
           <div className="flex gap-3">
             <button
               onClick={toggleCamera}
-              className={`flex-1 py-3 px-4 font-bold rounded-xl transition-all shadow-md active:scale-95 text-center text-sm ${
-                isCameraOn ? 'bg-slate-800 hover:bg-slate-900 text-white' : 'bg-orange-500 hover:bg-orange-600 text-white'
-              }`}
+              className={`flex-1 py-3 px-8 rounded-full font-[Poppins] font-medium text-[14px] transition-all duration-200 ease-in border-none cursor-pointer ${isCameraOn
+                ? 'bg-text-main hover:bg-black text-white shadow-[0_4px_12px_rgba(26,26,26,0.3)]'
+                : 'bg-primary hover:bg-primary-dark text-white shadow-[0_4px_12px_rgba(230,126,34,0.3)]'
+                }`}
             >
-              {isCameraOn ? '⏸ Matikan Kamera' : '▶ Nyalakan Kamera'}
+              {isCameraOn ? 'Matikan Kamera' : 'Nyalakan Kamera'}
             </button>
 
             <button
               onClick={() => (isInferenceRunning ? stopInference() : startInference())}
               disabled={!isModelLoaded || !isCameraOn}
-              className="flex-1 py-3 px-4 bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold rounded-xl transition-all shadow-md active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed text-sm"
+              className="flex-1 py-3 px-8 bg-transparent border-[1.5px] border-primary text-primary hover:bg-surface-warm disabled:opacity-50 disabled:hover:bg-transparent disabled:cursor-not-allowed rounded-full font-[Poppins] font-medium text-[14px] transition-all duration-200 ease-in cursor-pointer"
             >
-              {isInferenceRunning ? '⏹ Hentikan Scan AI' : '🔍 Deteksi Bahan Masakan'}
+              {isInferenceRunning ? 'Hentikan Scan AI' : 'Deteksi Bahan'}
             </button>
           </div>
 
-          <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
-            <div className="flex items-center justify-between mb-3 border-b border-slate-100 pb-2">
-              <h3 className="text-slate-900 font-black text-sm flex items-center gap-2">
-                Bahan di Keranjang 
-                <span className="bg-orange-500 text-white text-xs font-bold px-2 py-0.2 rounded-md">{cart.length}</span>
+          <div className="bg-surface rounded-[12px] p-[16px_20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] border border-border-soft shrink-0">
+            <div className="flex items-center justify-between mb-4 pb-3 border-b border-border-soft">
+              <h3 className="font-[Poppins] font-semibold text-[15px] text-text-main flex items-center gap-2 m-0">
+                Bahan di Keranjang
+                <span className="bg-primary text-white text-[11px] font-medium px-2 py-0.5 rounded-full">{cart.length}</span>
               </h3>
               {cart.length > 0 && (
-                <button onClick={() => setCart([])} className="text-red-500 hover:text-red-600 text-xs font-bold transition-colors">
+                <button onClick={() => setCart([])} className="text-red-500 hover:text-red-600 text-xs font-medium transition-colors p-0 m-0 border-none bg-transparent">
                   [Kosongkan]
                 </button>
               )}
             </div>
 
             {cart.length === 0 ? (
-              <p className="text-slate-400 text-xs text-center py-4 italic">Keranjang kosong. Scan bahan masakan di atas.</p>
+              <p className="font-[Inter] text-[13px] text-[#AAAAAA] text-center py-[24px] m-0">Keranjang kosong. Silakan nyalakan kamera dan scan bahan masakan Anda.</p>
             ) : (
               <div className="flex flex-wrap gap-2">
                 {cart.map((ingredient) => (
-                  <div key={ingredient} className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-bold border shadow-sm ${INGREDIENT_INFO[ingredient]?.badge || 'bg-slate-100'}`}>
+                  <div key={ingredient} className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-[13px] font-medium border shadow-sm ${INGREDIENT_INFO[ingredient]?.badge || 'bg-surface-warm text-text-main border-border-soft'}`}>
                     <span>{INGREDIENT_INFO[ingredient]?.emoji}</span>
                     <span>{ingredient}</span>
-                    <button onClick={() => removeFromCart(ingredient)} className="ml-1 text-slate-400 hover:text-slate-900 font-black">✕</button>
+                    <button onClick={() => removeFromCart(ingredient)} className="ml-1 text-text-muted hover:text-text-main font-bold p-0 m-0 border-none bg-transparent">✕</button>
                   </div>
                 ))}
               </div>
@@ -357,75 +500,134 @@ export default function App() {
 
         {/* ================= RIGHT COLUMN ================= */}
         <div className="w-full lg:w-2/5 flex flex-col gap-4 h-full overflow-hidden">
-          
-          <div className="flex-1 bg-white border border-slate-200 rounded-xl p-5 shadow-sm overflow-y-auto flex flex-col">
-            <h3 className="text-slate-900 font-black text-base mb-4 sticky top-0 bg-white pb-2 border-b border-slate-100 flex items-center justify-between">
-              <span>📖 Rekomendasi Menu Masak</span>
-              <span className="text-xs text-orange-600 bg-orange-50 px-2 py-0.5 rounded font-bold">
+
+          <div className="flex-1 bg-surface rounded-[12px] p-[16px_20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] border border-border-soft flex flex-col overflow-y-auto">
+            <div className="flex items-center justify-between mb-4 pb-3 border-b border-border-soft sticky top-0 bg-surface z-10">
+              <h3 className="font-[Poppins] font-semibold text-[15px] text-text-main flex items-center gap-2 m-0">
+                Rekomendasi Menu Masak
+              </h3>
+              <span className="text-[11px] text-primary bg-surface-warm px-2.5 py-1 rounded-full font-medium border border-border-soft">
                 {matchedRecipes.length} Menu Cocok
               </span>
-            </h3>
+            </div>
 
             {cart.length === 0 ? (
-              <div className="text-center py-8 my-auto space-y-2">
-                <span className="text-4xl block">🥗</span>
-                <p className="text-slate-400 text-xs">Belum ada resep terbuka.</p>
-              </div>
+              <p className="font-[Inter] text-[13px] text-[#AAAAAA] text-center py-[24px] m-0">Keranjang belanja kosong. Isi bahan masakan untuk melihat rekomendasi resep.</p>
             ) : matchedRecipes.length === 0 ? (
-              <div className="text-center py-8 my-auto p-4 border border-dashed border-amber-200 bg-amber-50/40 rounded-xl text-amber-800 space-y-1">
-                <p className="text-xs font-bold">⚠️ Kombinasi Menu Belum Ditemukan</p>
-                <p className="text-[11px] text-slate-500">Coba variasikan atau tambahkan komponen bahan.</p>
-              </div>
+              <p className="font-[Inter] text-[13px] text-[#AAAAAA] text-center py-[24px] m-0">Kombinasi Menu Belum Ditemukan. Coba tambahkan bahan lain.</p>
             ) : (
-              <div className="space-y-3 pr-1">
-                {matchedRecipes.map((recipe) => (
-                  <div key={recipe.id} className="p-4 bg-slate-50 hover:bg-orange-50/30 border border-slate-200 hover:border-orange-200 rounded-xl transition-all duration-200">
-                    <div className="flex items-start justify-between mb-1">
-                      <div>
-                        <h4 className="text-slate-900 font-black text-sm">{recipe.name}</h4>
-                        <p className="text-slate-500 text-xs mt-0.5 leading-relaxed">{recipe.description}</p>
-                      </div>
-                      <span className="text-[10px] bg-orange-100 text-orange-800 px-2 py-0.5 rounded font-bold shrink-0">{recipe.difficulty}</span>
-                    </div>
+              <div className="space-y-3">
+                {matchedRecipes.map((recipe) => {
+                  const isExpanded = selectedRecipe === recipe.id;
+                  const matchedCount = recipe.ingredients.filter(ing => cart.includes(ing)).length;
+                  const totalCount = recipe.ingredients.length;
+                  const isFullyMatched = matchedCount === totalCount;
 
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mt-3 pt-2 border-t border-slate-200/60">
-                      <div className="flex flex-wrap gap-1">
-                        {recipe.ingredients.map((ingredient) => (
-                          <span key={ingredient} className="text-[10px] px-2 py-0.5 rounded bg-white border border-slate-200 text-slate-600 font-semibold">
-                            {INGREDIENT_INFO[ingredient]?.emoji} {ingredient}
-                          </span>
-                        ))}
+                  return (
+                    <div
+                      key={recipe.id}
+                      onClick={() => setSelectedRecipe(isExpanded ? null : recipe.id)}
+                      className={`p-4 bg-white border ${isExpanded ? 'border-primary shadow-md' : 'border-border-soft shadow-[0_2px_8px_rgba(0,0,0,0.03)]'} rounded-xl transition-all duration-300 cursor-pointer hover:shadow-md hover:border-primary/40`}
+                    >
+                      <div className="flex items-start gap-4">
+                        {recipe.image && (
+                          <img
+                            src={recipe.image}
+                            alt={recipe.name}
+                            className="w-16 h-16 rounded-lg object-cover bg-stone-50 border border-border-soft shrink-0 shadow-sm"
+                            onError={(e) => { e.target.style.display = 'none'; }}
+                          />
+                        )}
+                        <div className="flex-1">
+                          <div className="flex items-start justify-between gap-2">
+                            <div className="flex items-center gap-2">
+                              <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${isFullyMatched ? 'bg-green-fresh' : 'bg-primary'}`} />
+                              <h4 className="text-[#1A1A1A] font-[Poppins] font-bold text-sm leading-snug">{recipe.name}</h4>
+                            </div>
+                            <span className="text-[10px] bg-surface-warm text-primary font-bold px-2 py-0.5 rounded-md border border-border-soft shrink-0">
+                              {recipe.difficulty}
+                            </span>
+                          </div>
+                          <p className="text-text-muted font-[Inter] text-xs mt-1 leading-relaxed">{recipe.description}</p>
+                        </div>
                       </div>
-                      <span className="text-slate-500 text-[11px] font-bold whitespace-nowrap">⏱️ {recipe.cookTime}</span>
+
+                      <div className="flex flex-wrap items-center justify-between gap-2 mt-3 pt-3 border-t border-border-soft/60 text-xs">
+                        <div className="flex flex-wrap gap-1">
+                          {recipe.ingredients.map((ingredient) => {
+                            const isPresent = cart.includes(ingredient);
+                            return (
+                              <span
+                                key={ingredient}
+                                className={`text-[10px] px-2 py-0.5 rounded-md font-medium border ${isPresent
+                                  ? 'bg-[#E8F5E9] text-[#27AE60] border-[#C8E6C9]'
+                                  : 'bg-stone-50 text-[#888888] border-stone-200'
+                                }`}
+                              >
+                                {INGREDIENT_INFO[ingredient]?.emoji || '•'} {ingredient}
+                              </span>
+                            );
+                          })}
+                        </div>
+                        <div className="flex items-center gap-3 text-[#666666] font-medium text-[11px]">
+                          <span>⏱️ {recipe.cookTime}</span>
+                          <span className={`transform transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}>▼</span>
+                        </div>
+                      </div>
+
+                      {/* Expanded Section */}
+                      {isExpanded && (
+                        <div className="mt-4 pt-4 border-t border-border-soft/80 space-y-4 animate-[fadeIn_0.25s_ease-out_forwards]">
+                          <div>
+                            <p className="text-xs text-primary font-bold uppercase tracking-wider mb-2">Bahan Lengkap:</p>
+                            <ul className="list-disc pl-5 text-xs text-[#555555] space-y-1">
+                              {recipe.fullIngredients?.map((ing, idx) => (
+                                <li key={idx}>{ing}</li>
+                              )) || recipe.ingredients.map((ing, idx) => <li key={idx}>{ing}</li>)}
+                            </ul>
+                          </div>
+
+                          <div>
+                            <p className="text-xs text-primary font-bold uppercase tracking-wider mb-2">Cara Memasak:</p>
+                            <ol className="list-decimal pl-5 text-xs text-[#555555] space-y-2">
+                              {recipe.instructions?.map((step, idx) => (
+                                <li key={idx} className="pl-1 leading-relaxed">{step}</li>
+                              )) || <p className="italic text-stone-400">Instruksi belum tersedia.</p>}
+                            </ol>
+                          </div>
+                        </div>
+                      )}
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             )}
           </div>
 
-          <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
-            <h3 className="text-slate-900 font-black text-sm mb-3 border-b border-slate-100 pb-2">📊 Live AI Confidence Monitor</h3>
+          <div className="bg-surface rounded-[12px] p-[16px_20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] border border-border-soft flex flex-col shrink-0">
+            <h3 className="font-[Poppins] font-semibold text-[15px] text-text-main mb-4 pb-3 border-b border-border-soft m-0">Live AI Confidence Monitor</h3>
 
-            <div className="space-y-2.5">
+            <div className="space-y-4">
               {predictions.length === 0 ? (
-                <p className="text-slate-400 text-xs text-center py-2 italic">Nyalakan kamera dan deteksi untuk melihat grafik probabilitas.</p>
+                <p className="font-[Inter] text-[13px] text-[#AAAAAA] text-center py-[24px] m-0">Nyalakan kamera dan deteksi untuk melihat grafik probabilitas secara real-time.</p>
               ) : (
-                predictions.map((pred, idx) => {
+                predictions
+                  .filter((pred) => pred.className !== 'Background')
+                  .map((pred, idx) => {
                   const pct = (pred.probability * 100).toFixed(1);
-                  const isHigh = pred.probability >= 0.75;
-                  
+                  const barColor = pred.probability >= 0.75 ? '#27AE60' : '#E67E22';
+
                   return (
-                    <div key={idx} className="space-y-1">
-                      <div className="flex items-center justify-between text-[11px]">
-                        <div className="flex items-center gap-1.5 font-bold text-slate-700">
+                    <div key={idx} className="space-y-1.5">
+                      <div className="flex items-center justify-between text-[12px]">
+                        <div className="flex items-center gap-1.5 font-[Inter] text-[#666666]">
                           <span>{INGREDIENT_INFO[pred.className]?.emoji || '•'}</span>
-                          <span className={isHigh ? "text-orange-600 font-extrabold" : ""}>{pred.className}</span>
+                          <span>{pred.className}</span>
                         </div>
-                        <span className={`font-bold ${isHigh ? 'text-orange-600' : 'text-slate-400'}`}>{pct}%</span>
+                        <span className="font-mono text-[11px]" style={{ color: barColor }}>{pct}%</span>
                       </div>
-                      <div className="w-full bg-slate-100 rounded-full h-2 overflow-hidden border border-slate-200 shadow-inner">
-                        <div className={`h-full transition-all duration-200 rounded-full ${isHigh ? 'bg-gradient-to-r from-orange-400 to-orange-500' : pred.probability >= 0.45 ? 'bg-gradient-to-r from-amber-400 to-yellow-400' : 'bg-slate-300'}`} style={{ width: `${pct}%` }}></div>
+                      <div className="w-full bg-[#F0EBE3] rounded-full h-[6px] overflow-hidden">
+                        <div className="h-full transition-all duration-200 rounded-full" style={{ width: `${pct}%`, backgroundColor: barColor }}></div>
                       </div>
                     </div>
                   );
@@ -436,6 +638,12 @@ export default function App() {
 
         </div>
       </div>
+
+      <footer className="bg-surface border-t border-border-soft px-[24px] py-[12px]">
+        <p className="font-[Inter] text-[12px] text-[#AAAAAA] text-center m-0">
+          Smart Ingredient Scanner — Kelompok Etanol · Telkom University Purwokerto · 2026
+        </p>
+      </footer>
 
       <style>{`
         @keyframes scanLine {

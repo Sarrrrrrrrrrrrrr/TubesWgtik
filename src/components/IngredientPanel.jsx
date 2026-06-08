@@ -53,17 +53,34 @@ export function IngredientPanel({ detectedClass, info, confidence }) {
 
       {/* Resep */}
       {info.recipes && info.recipes.length > 0 && (
-        <div>
-          <p className="text-xs text-slate-400 font-mono uppercase tracking-widest mb-2">
+        <div className="pt-2">
+          <p className="text-xs text-slate-400 font-mono uppercase tracking-widest mb-6">
             Recipes
           </p>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-3">
             {info.recipes.map((recipe, idx) => (
               <div
                 key={idx}
-                className="bg-slate-700 rounded px-3 py-2 text-sm text-center text-slate-200 border border-slate-600 hover:border-slate-500 transition-colors"
+                className="bg-[#F5F0E8] rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.06)] p-4 relative flex flex-col pt-8 mt-2"
               >
-                {recipe}
+                {/* Gambar/ilustrasi bahan yang overflow */}
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-2xl border-[3px] border-[#F5F0E8] z-10">
+                  🍽️
+                </div>
+                
+                <h3 className="font-[Poppins] font-bold uppercase text-[18px] text-[#1A1A1A] text-center leading-tight">
+                  {recipe}
+                </h3>
+                
+                <p className="font-[Inter] text-[13px] text-[#666666] text-center mt-1 line-clamp-1">
+                  Resep lezat {info.name.toLowerCase()}
+                </p>
+                
+                <div className="mt-3 text-center">
+                  <span className="text-[11px] tracking-widest text-[#E67E22] font-bold uppercase cursor-pointer">
+                    LIHAT DETAIL →
+                  </span>
+                </div>
               </div>
             ))}
           </div>
