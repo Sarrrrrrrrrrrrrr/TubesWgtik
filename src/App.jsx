@@ -220,7 +220,7 @@ export default function App() {
   // ========== STATE MANAGEMENT ==========
   const [cart, setCart] = useState([]);
   const [isModelLoaded, setIsModelLoaded] = useState(false);
-  const [isCameraOn, setIsCameraOn] = useState(false); // SAKLAR KAMERA YANG BENER
+  const [isCameraOn, setIsCameraOn] = useState(false);
   const [isInferenceRunning, setIsInferenceRunning] = useState(false);
   const [currentDetection, setCurrentDetection] = useState(null);
   const [predictions, setPredictions] = useState([]);
@@ -267,8 +267,7 @@ export default function App() {
   // ========== LOGIKA KAMERA ANTI-MACET ==========
   const toggleCamera = async () => {
     if (isCameraOn) {
-      // PROSES MATIKAN KAMERA
-      stopInference(); // Pastikan AI mati dulu
+      stopInference();
       if (videoRef.current && videoRef.current.srcObject) {
         videoRef.current.srcObject.getTracks().forEach((track) => track.stop());
         videoRef.current.srcObject = null;
@@ -277,7 +276,6 @@ export default function App() {
       setPredictions([]);
       setCurrentDetection(null);
     } else {
-      // PROSES NYALAKAN KAMERA
       try {
         const stream = await navigator.mediaDevices.getUserMedia({
           video: { facingMode: 'environment' },
@@ -350,10 +348,8 @@ export default function App() {
 
   // ========== RECIPE MATCHING (LOGIKA REKOMENDASI CERDAS) ==========
   const matchedRecipes = RECIPE_DATABASE.filter((recipe) =>
-    // Asal ada MINIMAL 1 bahan di keranjang yang cocok dengan resep, resepnya muncul
     recipe.ingredients.some((ingredient) => cart.includes(ingredient))
   ).sort((a, b) => {
-    // Urutkan resep dari yang bahan cocoknya paling banyak ke yang paling sedikit
     const matchA = a.ingredients.filter(ing => cart.includes(ing)).length;
     const matchB = b.ingredients.filter(ing => cart.includes(ing)).length;
     return matchB - matchA;
@@ -362,20 +358,47 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background text-text-main antialiased relative flex flex-col pb-8 font-[Inter]">
 
+      {/* Dekorasi Background */}
+      <div className="fixed top-[3%] left-[3%] text-7xl opacity-20 pointer-events-none z-0">🥬</div>
+      <div className="fixed top-[8%] left-[25%] text-6xl opacity-20 pointer-events-none z-0">🥦</div>
+      <div className="fixed top-[5%] left-[50%] text-7xl opacity-20 pointer-events-none z-0">🍅</div>
+      <div className="fixed top-[10%] right-[8%] text-6xl opacity-20 pointer-events-none z-0">🥕</div>
+
+      <div className="fixed top-[18%] left-[12%] text-6xl opacity-20 pointer-events-none z-0">🧄</div>
+      <div className="fixed top-[22%] left-[40%] text-7xl opacity-20 pointer-events-none z-0">🌶️</div>
+      <div className="fixed top-[20%] right-[15%] text-6xl opacity-20 pointer-events-none z-0">🧅</div>
+
+      <div className="fixed top-[32%] left-[5%] text-7xl opacity-20 pointer-events-none z-0">🥦</div>
+      <div className="fixed top-[38%] left-[28%] text-6xl opacity-20 pointer-events-none z-0">🍅</div>
+      <div className="fixed top-[35%] left-[55%] text-7xl opacity-20 pointer-events-none z-0">🥬</div>
+      <div className="fixed top-[40%] right-[10%] text-6xl opacity-20 pointer-events-none z-0">🌶️</div>
+
+      <div className="fixed top-[52%] left-[15%] text-6xl opacity-20 pointer-events-none z-0">🧄</div>
+      <div className="fixed top-[58%] left-[45%] text-7xl opacity-20 pointer-events-none z-0">🥕</div>
+      <div className="fixed top-[55%] right-[18%] text-6xl opacity-20 pointer-events-none z-0">🧅</div>
+
+      <div className="fixed top-[68%] left-[8%] text-7xl opacity-20 pointer-events-none z-0">🥬</div>
+      <div className="fixed top-[72%] left-[35%] text-6xl opacity-20 pointer-events-none z-0">🍅</div>
+      <div className="fixed top-[70%] right-[8%] text-7xl opacity-20 pointer-events-none z-0">🥦</div>
+
+      <div className="fixed top-[82%] left-[18%] text-6xl opacity-20 pointer-events-none z-0">🌶️</div>
+      <div className="fixed top-[88%] left-[50%] text-7xl opacity-20 pointer-events-none z-0">🧄</div>
+      <div className="fixed top-[85%] right-[15%] text-6xl opacity-20 pointer-events-none z-0">🥕</div>
+
       {/* HEADER FRESH CULINARY */}
       <header className="bg-white border-b border-border-soft px-6 py-3 sticky top-0 z-50 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className="text-xl">🌿</span>
           <div>
-            <h1 className="font-[Poppins] font-semibold text-[20px] text-[#1A1A1A] m-0 leading-tight">Smart Ingredient Scanner</h1>
-            <p className="font-[Inter] text-[12px] text-[#888888] m-0 mt-0.5">Identifikasi bahan masakan secara real-time</p>
+            <h1 className="font-[Poppins] font-semibold text-[20px] text-text-main m-0 leading-tight">Smart Ingredient Scanner</h1>
+            <p className="font-[Inter] text-[12px] text-text-muted m-0 mt-0.5">Identifikasi bahan masakan secara real-time</p>
           </div>
         </div>
 
         <div className="flex items-center gap-3">
           <span className={`px-3 py-1 rounded-full text-[11px] font-[Inter] transition-all duration-300 ${isInferenceRunning || isCameraOn
-            ? 'bg-[#E8F5E9] text-[#27AE60]'
-            : 'bg-[#F0F0F0] text-[#888888]'
+            ? 'bg-[#E8F5E9] text-green-fresh'
+            : 'bg-[#F0F0F0] text-text-muted'
             }`}>
             ● {!isModelLoaded ? 'LOADING MODEL' : !isCameraOn ? 'KAMERA OFF' : isInferenceRunning ? 'SCANNING ACTIVE' : 'READY'}
           </span>
@@ -388,14 +411,14 @@ export default function App() {
         {/* ================= LEFT COLUMN ================= */}
         <div className="w-full lg:w-3/5 flex flex-col gap-4 h-full">
 
-          <div className="flex-1 relative rounded-[16px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex items-center justify-center bg-surface-warm">
+          <div className="flex-1 relative rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex items-center justify-center bg-surface-warm">
             {isInferenceRunning && (
               <div className="absolute inset-0 z-20 pointer-events-none">
-                <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-80 animate-[scanLine_2.5s_ease-in-out_infinite]" style={{ top: '0%' }}></div>
+                <div className="absolute w-full h-1 bg-linear-to-r from-transparent via-primary to-transparent opacity-80 animate-[scanLine_2.5s_ease-in-out_infinite]" style={{ top: '0%' }}></div>
               </div>
             )}
 
-            <video ref={videoRef} className="w-full h-full object-cover rounded-[16px]" playsInline muted />
+            <video ref={videoRef} className="w-full h-full object-cover rounded-2xl" playsInline muted />
 
             {/* OVERLAY DETEKSI */}
             {isCameraOn && currentDetection && detectionConfidence !== null && (
@@ -438,7 +461,7 @@ export default function App() {
             )}
 
             {!isCameraOn && isModelLoaded && (
-              <div className="absolute inset-0 bg-gradient-to-br from-surface-warm to-background flex flex-col items-center justify-center z-30 p-4 text-center">
+              <div className="absolute inset-0 bg-linear-to-br from-surface-warm to-background flex flex-col items-center justify-center z-30 p-4 text-center">
                 <svg className="w-16 h-16 text-[#CCBBAA] mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
@@ -469,7 +492,7 @@ export default function App() {
             </button>
           </div>
 
-          <div className="bg-surface rounded-[12px] p-[16px_20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] border border-border-soft shrink-0">
+          <div className="bg-surface rounded-xl p-[16px_20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] border border-border-soft shrink-0">
             <div className="flex items-center justify-between mb-4 pb-3 border-b border-border-soft">
               <h3 className="font-[Poppins] font-semibold text-[15px] text-text-main flex items-center gap-2 m-0">
                 Bahan di Keranjang
@@ -483,7 +506,7 @@ export default function App() {
             </div>
 
             {cart.length === 0 ? (
-              <p className="font-[Inter] text-[13px] text-[#AAAAAA] text-center py-[24px] m-0">Keranjang kosong. Silakan nyalakan kamera dan scan bahan masakan Anda.</p>
+              <p className="font-[Inter] text-[13px] text-[#AAAAAA] text-center py-6 m-0">Keranjang kosong. Silakan nyalakan kamera dan scan bahan masakan Anda.</p>
             ) : (
               <div className="flex flex-wrap gap-2">
                 {cart.map((ingredient) => (
@@ -501,7 +524,7 @@ export default function App() {
         {/* ================= RIGHT COLUMN ================= */}
         <div className="w-full lg:w-2/5 flex flex-col gap-4 h-full overflow-hidden">
 
-          <div className="flex-1 bg-surface rounded-[12px] p-[16px_20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] border border-border-soft flex flex-col overflow-y-auto">
+          <div className="flex-1 bg-surface rounded-xl p-[16px_20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] border border-border-soft flex flex-col overflow-y-auto">
             <div className="flex items-center justify-between mb-4 pb-3 border-b border-border-soft sticky top-0 bg-surface z-10">
               <h3 className="font-[Poppins] font-semibold text-[15px] text-text-main flex items-center gap-2 m-0">
                 Rekomendasi Menu Masak
@@ -512,9 +535,9 @@ export default function App() {
             </div>
 
             {cart.length === 0 ? (
-              <p className="font-[Inter] text-[13px] text-[#AAAAAA] text-center py-[24px] m-0">Keranjang belanja kosong. Isi bahan masakan untuk melihat rekomendasi resep.</p>
+              <p className="font-[Inter] text-[13px] text-[#AAAAAA] text-center py-6 m-0">Keranjang belanja kosong. Isi bahan masakan untuk melihat rekomendasi resep.</p>
             ) : matchedRecipes.length === 0 ? (
-              <p className="font-[Inter] text-[13px] text-[#AAAAAA] text-center py-[24px] m-0">Kombinasi Menu Belum Ditemukan. Coba tambahkan bahan lain.</p>
+              <p className="font-[Inter] text-[13px] text-[#AAAAAA] text-center py-6 m-0">Kombinasi Menu Belum Ditemukan. Coba tambahkan bahan lain.</p>
             ) : (
               <div className="space-y-3">
                 {matchedRecipes.map((recipe) => {
@@ -542,7 +565,7 @@ export default function App() {
                           <div className="flex items-start justify-between gap-2">
                             <div className="flex items-center gap-2">
                               <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${isFullyMatched ? 'bg-green-fresh' : 'bg-primary'}`} />
-                              <h4 className="text-[#1A1A1A] font-[Poppins] font-bold text-sm leading-snug">{recipe.name}</h4>
+                              <h4 className="text-text-main font-[Poppins] font-bold text-sm leading-snug">{recipe.name}</h4>
                             </div>
                             <span className="text-[10px] bg-surface-warm text-primary font-bold px-2 py-0.5 rounded-md border border-border-soft shrink-0">
                               {recipe.difficulty}
@@ -560,8 +583,8 @@ export default function App() {
                               <span
                                 key={ingredient}
                                 className={`text-[10px] px-2 py-0.5 rounded-md font-medium border ${isPresent
-                                  ? 'bg-[#E8F5E9] text-[#27AE60] border-[#C8E6C9]'
-                                  : 'bg-stone-50 text-[#888888] border-stone-200'
+                                  ? 'bg-[#E8F5E9] text-green-fresh border-[#C8E6C9]'
+                                  : 'bg-stone-50 text-text-muted border-stone-200'
                                 }`}
                               >
                                 {INGREDIENT_INFO[ingredient]?.emoji || '•'} {ingredient}
@@ -604,12 +627,12 @@ export default function App() {
             )}
           </div>
 
-          <div className="bg-surface rounded-[12px] p-[16px_20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] border border-border-soft flex flex-col shrink-0">
+          <div className="bg-surface rounded-xl p-[16px_20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] border border-border-soft flex flex-col shrink-0">
             <h3 className="font-[Poppins] font-semibold text-[15px] text-text-main mb-4 pb-3 border-b border-border-soft m-0">Live AI Confidence Monitor</h3>
 
             <div className="space-y-4">
               {predictions.length === 0 ? (
-                <p className="font-[Inter] text-[13px] text-[#AAAAAA] text-center py-[24px] m-0">Nyalakan kamera dan deteksi untuk melihat grafik probabilitas secara real-time.</p>
+                <p className="font-[Inter] text-[13px] text-[#AAAAAA] text-center py-6 m-0">Nyalakan kamera dan deteksi untuk melihat grafik probabilitas secara real-time.</p>
               ) : (
                 predictions
                   .filter((pred) => pred.className !== 'Background')
@@ -626,7 +649,7 @@ export default function App() {
                         </div>
                         <span className="font-mono text-[11px]" style={{ color: barColor }}>{pct}%</span>
                       </div>
-                      <div className="w-full bg-[#F0EBE3] rounded-full h-[6px] overflow-hidden">
+                      <div className="w-full bg-[#F0EBE3] rounded-full h-1.5 overflow-hidden">
                         <div className="h-full transition-all duration-200 rounded-full" style={{ width: `${pct}%`, backgroundColor: barColor }}></div>
                       </div>
                     </div>
@@ -639,7 +662,7 @@ export default function App() {
         </div>
       </div>
 
-      <footer className="bg-surface border-t border-border-soft px-[24px] py-[12px]">
+      <footer className="bg-surface border-t border-border-soft px-6 py-3">
         <p className="font-[Inter] text-[12px] text-[#AAAAAA] text-center m-0">
           Smart Ingredient Scanner — Kelompok Etanol · Telkom University Purwokerto · 2026
         </p>

@@ -32,7 +32,7 @@ export function CameraView({ videoRef, isActive, detectedClass, confidence }) {
       {isActive && (
         <div className="absolute inset-0 pointer-events-none">
           <div
-            className="w-full h-1 bg-gradient-to-b from-green-500 via-green-400 to-transparent opacity-60"
+            className="w-full h-1 bg-linear-to-b from-green-500 via-green-400 to-transparent opacity-60"
             style={{
               animation: 'scanLine 2s linear infinite',
             }}
@@ -42,7 +42,7 @@ export function CameraView({ videoRef, isActive, detectedClass, confidence }) {
 
       {/* Detection Overlay */}
       {detectedClass && (
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/50 to-transparent px-4 py-3">
+        <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black via-black/50 to-transparent px-4 py-3">
           <div className="flex justify-between items-end">
             <div>
               <p className="text-green-400 font-mono text-sm">DETECTED</p>
