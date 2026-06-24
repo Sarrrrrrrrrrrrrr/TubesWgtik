@@ -51,7 +51,7 @@ export class FrameProcessor {
 
               // Convert ke format yang kita inginkan
               const formatted = predictions.map((pred) => ({
-                className: pred.className,
+                className: pred.className === 'Backround' ? 'Background' : pred.className,
                 probability: pred.probability,
               }));
 
