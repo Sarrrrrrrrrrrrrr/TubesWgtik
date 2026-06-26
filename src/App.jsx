@@ -517,13 +517,10 @@ export default function App() {
   };
 
   // ========== RECIPE MATCHING (LOGIKA REKOMENDASI CERDAS) ==========
+  // Hanya tampilkan resep jika SEMUA bahan yang dibutuhkan ada di keranjang
   const matchedRecipes = RECIPE_DATABASE.filter((recipe) =>
-    recipe.ingredients.some((ingredient) => cart.includes(ingredient))
-  ).sort((a, b) => {
-    const matchA = a.ingredients.filter(ing => cart.includes(ing)).length;
-    const matchB = b.ingredients.filter(ing => cart.includes(ing)).length;
-    return matchB - matchA;
-  });
+    recipe.ingredients.every((ingredient) => cart.includes(ingredient))
+  ).sort((a, b) => b.ingredients.length - a.ingredients.length);
 
   return (
     <div className="min-h-screen bg-background text-text-main antialiased relative flex flex-col pb-8 font-[Inter]">
