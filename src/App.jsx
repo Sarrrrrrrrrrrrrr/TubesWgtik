@@ -573,12 +573,12 @@ export default function App() {
       </header>
 
       {/* MAIN LAYOUT SPLIT */}
-      <div className="relative z-1 max-w-7xl mx-auto w-full p-4 md:p-6 flex flex-col lg:flex-row gap-6 h-[calc(100vh-80px)] overflow-hidden">
+      <div className="relative z-1 max-w-7xl mx-auto w-full p-4 md:p-6 flex flex-col lg:flex-row gap-6 lg:h-[calc(100vh-80px)] lg:overflow-hidden">
 
         {/* ================= LEFT COLUMN ================= */}
-        <div className="w-full lg:w-3/5 flex flex-col gap-4 h-full">
+        <div className="w-full lg:w-3/5 flex flex-col gap-4 lg:h-full">
 
-          <div className="flex-1 relative rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex items-center justify-center bg-surface-warm">
+          <div className="h-64 lg:flex-1 relative rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex items-center justify-center bg-surface-warm">
             {isInferenceRunning && (
               <div className="absolute inset-0 z-20 pointer-events-none">
                 <div className="absolute w-full h-1 bg-linear-to-r from-transparent via-primary to-transparent opacity-80 animate-[scanLine_2.5s_ease-in-out_infinite]" style={{ top: '0%' }}></div>
@@ -705,7 +705,7 @@ export default function App() {
         </div>
 
         {/* ================= RIGHT COLUMN ================= */}
-        <div className="w-full lg:w-2/5 flex flex-col gap-4 h-full overflow-hidden">
+        <div className="w-full lg:w-2/5 flex flex-col gap-4 lg:h-full lg:overflow-hidden">
 
           <div className="flex-1 bg-surface rounded-xl p-[16px_20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] border border-border-soft flex flex-col overflow-y-auto">
             <div className="flex items-center justify-between mb-4 pb-3 border-b border-border-soft sticky top-0 bg-surface z-10">
